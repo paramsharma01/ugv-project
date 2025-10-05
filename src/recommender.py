@@ -43,5 +43,5 @@ def get_movie_recommendations(data, movie_title, min_ratings=3, top_n=5):
     if corr_df.empty:
         return [f"No similar movies found for '{movie_title}'. Try a more popular movie."]
 
-    print(f"[INFO] Found {len(cdf)} correlated movies.")
+    print(f"[INFO] Found {len(corr_df)} correlated movies.")
     return corr_df.head(top_n).index.tolist()
